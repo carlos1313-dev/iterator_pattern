@@ -4,10 +4,23 @@
  */
 package com.mycompany.iterator_pattern.collection;
 
+import com.mycompany.iterator_pattern.model.Teacher;
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  *
  * @author sangr
  */
-public class ListTeacherArray {
-    
+public class ListTeacherArray implements Iterable<Teacher> {
+
+    private final ArrayList<Teacher> list = new ArrayList<>();
+
+    public void add(Teacher t) { list.add(t); }
+
+    // Delega al Iterator concreto de ArrayList (iteración en orden de inserción)
+    @Override
+    public Iterator<Teacher> iterator() {
+        return list.iterator();
+    }
 }

@@ -8,6 +8,20 @@ package com.mycompany.iterator_pattern.collection;
  *
  * @author sangr
  */
-public class ListStudentArray {
-    
+// ListStudentArray.java  — ConcreteCollection sobre ArrayList
+import com.mycompany.iterator_pattern.model.Student;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ListStudentArray implements Iterable<Student> {
+
+    private final ArrayList<Student> list = new ArrayList<>();
+
+    public void add(Student s) { list.add(s); }
+
+    // Delega al Iterator concreto de ArrayList (iteración en orden de inserción)
+    @Override
+    public Iterator<Student> iterator() {
+        return list.iterator();
+    }
 }

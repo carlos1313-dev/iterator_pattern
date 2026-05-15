@@ -4,6 +4,8 @@
  */
 package com.mycompany.iterator_pattern.model;
 
+import com.mycompany.iterator_pattern.visitor.PersonVisitor;
+
 /**
  *
  * @author sangr
