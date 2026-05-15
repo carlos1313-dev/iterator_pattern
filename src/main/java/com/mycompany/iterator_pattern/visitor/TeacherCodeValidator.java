@@ -4,6 +4,7 @@
  */
 package com.mycompany.iterator_pattern.visitor;
 
+import com.mycompany.iterator_pattern.visitor.notifier.Notifier;
 import com.mycompany.iterator_pattern.model.Student;
 import com.mycompany.iterator_pattern.model.Teacher;
 
@@ -21,7 +22,7 @@ public class TeacherCodeValidator implements PersonVisitor {
     public void visit(Student student) {
         // Para estudiantes no aplica esta validación
         System.out.println("  — Estudiante " + student.getName()
-                + ": validacion de código docente no aplica.");
+                + ": validacion de codigo docente no aplica.");
     }
 
     @Override

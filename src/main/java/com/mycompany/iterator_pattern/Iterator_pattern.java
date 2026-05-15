@@ -17,6 +17,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
+/*
+Nota: Para crear el menú interactivo, se crean algunos datos con los métodos buildStudents() y buildTeachers(), para ello la clase conoce a
+las entidades directamente. Sin embargo, para aplicar rigurosamente el patrón Iterator y visitor, los datos deberían venir precargados, así 
+no conocería a estas clases, el cliente sólo tendría relación con la interfaz Iterable<T> , cuyo tipo sería Student o Teacher, que devuelve un 
+iterador<T> con iterator(): Iterador<T>, y a la clase personVisitor, para hacer uso del patrón Visitor, como se establece en el UML.
+
+La razón de que en esta clase el Cliente importe directamente Person, Student, Teacher y listas concretas, es sólo para crear los objetos de prueba,
+Esto se ve reflejado en el método transverse(), donde realmente se aplica el patrón limpiamente, y está aislado de estas clases particulares.
+*/
+
 public class Iterator_pattern {
 
     // ---- datos de ejemplo ------------------------------------------------
@@ -48,7 +58,7 @@ public class Iterator_pattern {
         }
     }
 
-    // ---- separador de consola (sin caracteres especiales) ----------------
+    // ---- separador de consola ----------------
     private static void line() {
         System.out.println("----------------------------------------");
     }

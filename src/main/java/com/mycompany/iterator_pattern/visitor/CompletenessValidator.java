@@ -4,6 +4,7 @@
  */
 package com.mycompany.iterator_pattern.visitor;
 
+import com.mycompany.iterator_pattern.visitor.notifier.Notifier;
 import com.mycompany.iterator_pattern.model.Person;
 import com.mycompany.iterator_pattern.model.Student;
 import com.mycompany.iterator_pattern.model.Teacher;
