@@ -25,6 +25,9 @@ iterador<T> con iterator(): Iterador<T>, y a la clase personVisitor, para hacer 
 
 La razón de que en esta clase el Cliente importe directamente Person, Student, Teacher y listas concretas, es sólo para crear los objetos de prueba,
 Esto se ve reflejado en el método transverse(), donde realmente se aplica el patrón limpiamente, y está aislado de estas clases particulares.
+
+El cliente conoce a la interfaz Iterator<T> que tiene los métodos getNext() y hasMore():bool , y a la IterableCollection, que en este caso es
+la interfaz Iterable<T>, es decir, se utilizan clases ya existentes de Java para aplicar el patrón.
 */
 
 public class Iterator_pattern {

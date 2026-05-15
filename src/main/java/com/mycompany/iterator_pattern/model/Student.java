@@ -18,6 +18,6 @@ public class Student extends Person {
 
     @Override
     public void accept(PersonVisitor visitor) {
-        visitor.visit(this);   // double dispatch
+        visitor.visit(this);   
     }
 }

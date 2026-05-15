@@ -18,7 +18,7 @@ public class Teacher extends Person implements Comparable<Teacher> {
 
     @Override
     public void accept(PersonVisitor visitor) {
-        visitor.visit(this);   // double dispatch
+        visitor.visit(this);   
     }
 
     @Override
